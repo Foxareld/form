@@ -1,0 +1,123 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery form Demo</title>
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+            	
+    	<h1>Drop a line.</h1>
+    	<div class="message" style="display:none;"><div id="alert"></div></div>
+
+		<form id="contactform" class=""  method="post" action="./inc/sendmail.php">
+			<div class="field">
+				<label class="" for="name"><span class="listTitle">Name.</span></label>
+				<div class="clearfix"></div>
+				<div class="fifty">
+					<input id="name" name="name" class="" type="text" maxlength="255" value=""/><br />
+					<span class="lgt_grey">First</span> 
+				</div>
+				<div class="fifty">
+					<input id="lname" name="lname" class="" type="text" maxlength="255" value=""/><br />
+					<span class="lgt_grey">Last</span> 
+				</div>
+			    <div class="clearfix"></div>
+			</div> 
+			<div class="field">
+				<label class="" for="email"><span class="listTitle">Email.</span></label>
+			    <div class="clearfix"></div>
+				<input id="email" name="email" class="" type="text" maxlength="255" value=""/> 
+			</div> 
+			<div class="field">
+				<label class="" for="address"><span class="listTitle">Address.</span></label>
+			    <div class="clearfix"></div>
+				<input id="address" name="address" class="" type="text" maxlength="255" value=""/> 
+			</div> 
+			<div class="field">
+				<div class="thirty">
+					<label class="" for="city"><span class="listTitle">City.</span></label>
+					<input id="city" name="city" class="" type="text" maxlength="255" value=""/>
+				</div> 
+				<div class="thirty">
+					<label class="thirty" for="state"><span class="listTitle">State.</span></label>
+					<input id="state" name="state" class="" type="text" maxlength="255" value=""/> 
+				</div> 
+				<div class="thirty">
+					<label class="thirty" for="zip"><span class="listTitle">Zip.</span></label>
+					<input id="zip" name="zip" class="" type="text" maxlength="255" value=""/> 
+				</div> 
+				<div class="clearfix"></div>
+			</div>
+			<div class="field">
+				<label class="" for="newsletter"><span class="listTitle">News Letter.</span></label>
+			    <div class="clearfix"></div>
+				<input id="newsletter" name="newsletter" class="" type="checkbox" value="1" checked="checked" /> Check this block to receive our News Letter.  
+			</div>
+			<div class="field">
+				<label class="" for="services"><span class="listTitle">Services.</span></label>
+			    <div class="clearfix"></div>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Design" checked="checked"/> Design </span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Master Plan"/> Master Plan</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Front Foundation"/> Front Foundation</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Backyard Plan"/> Backyard Plan</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Specialty Garden"/> Specialty Garden</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Construction"/> Construction</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Planting"/> Planting</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Walk"/> Walk</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Terrace"/> Terrace</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Wall"/> Wall</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Outdoor Kitchen"/> Outdoor Kitchen</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Fireplace"/> Fireplace</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Driveway"/> Driveway</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Fencing"/> Fencing</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Pergola"/> Pergola</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Swimming Pool"/> Swimming Pool</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Irrigation"/> Irrigation</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Lighting"/> Lighting</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Grading & Drainage"/> Grading &amp; Drainage</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Maintenance"/> Maintenance</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Lawn Cutting"/> Lawn Cutting</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Lawn & Plant Health Care"/> Lawn &amp; Plant Health Care</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Organic Property Care"/> Organic Property Care</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Spring & Fall Clean Up"/> Spring &amp; Fall Clean Up</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Pruning"/> Pruning</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Fine Gardening"/> Fine Gardening</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Deer Protection"/> Deer Protection</span>
+				<span class="check_span"><input id="services" name="services[]" class="" type="checkbox" value="Snow Plowing"/> Snow Plowing</span>
+				<div class="clearfix"></div>
+			
+			</div> 
+			<div class="field">
+				<label class="" for="subject"><span class="listTitle">Subject.</span> </label>
+			    <div class="clearfix"></div>
+				<input id="subject" name="subject" class="" type="text" maxlength="255" value=""/> 
+			</div>
+			<div class="field">
+				<label class="" for="message"><span class="listTitle">Message.</span> </label>
+			    <div class="clearfix"></div>
+				<textarea id="message" name="message" class="" type="text" value=""></textarea>
+			</div> 
+			<span style="display:none;"><p>Honeypot:</p> <input type="text" name="last" value="" id="last" /></span>
+			<input type="submit" name="submit" class="sendit share_btn view_map" value="Submit." /> 
+		</form>
+ 
+	</div>
+	
+    <script type="text/javascript" src="./js/jquery.form.js"></script>
+    <script>
+    	$(document).ready(function() { 
+    		var options = { 
+    			target:        '#alert',
+    		}; 
+    		$('#contactform').ajaxForm(options); 
+    	});
+    </script>
+</body>
+</html>
