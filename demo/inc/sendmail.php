@@ -23,6 +23,7 @@ $emptyaddress = 'Entering your Address?';
 $emptycity = 'Entering your City?';
 $emptystate = 'Entering your State?';
 $emptyzip = 'Entering your Zip Code?';
+$emptyphone = 'Entering your Phone Number?';
 
 //       Various messages displayed when the fields are incorrectly formatted.
 $alertname =  'Entering your First Name using only the standard alphabet?';
@@ -34,7 +35,7 @@ $alertaddress = 'Entering your Address using only the standard alphabet?';
 $alertcity = 'Entering your City using only the standard alphanumeric characters, no puctuation.';
 $alertstate = 'Entering your State using only the standard alphanumeric characters, no puctuation.';
 $alertzip = 'Entering your Zip Code using only the standard alphanumeric characters, no puctuation.';
-
+$alertphone = 'Entering your Phone Number using the standard alphanumberic characters?';
 
 // --------------------------- Thats it! don't mess with below unless you are really smart! ---------------------------------
 
@@ -123,7 +124,14 @@ if ( empty($_REQUEST['last']) ) {
 		$pass = 1;
 		$alert .= "<li>" . $alertaddress . "</li>";
 	}
-	
+	// phone
+	if ( empty($_REQUEST['phone']) ) {
+		$pass = 1;
+		$alert .= "<li>" . $emptyphone . "</li>";
+	} elseif ( !eregi("^((((\(\d{3}\))|(\d{3}-))\d{3}-\d{4})|(\+?\d{2}((-| )\d{1,8}){1,5}))(( x| ext)\d{1,5}){0,1}$", $_REQUEST['email']) ) {
+		$pass = 1;
+		$alert .= "<li>" . $alertphone . "</li>";
+	}
 
 	//If the user err'd, print the error messages.
 	if ( $pass==1 ) {
@@ -198,6 +206,7 @@ if ( empty($_REQUEST['last']) ) {
 		$message = "\n\nAn inquiry has been submitted on you website, please use the information provided below to follow up.\n\n";
 	    $message .= "From: " . $variables['name'] . " ". $variables['lname'] . "\n";
 		$message .= "Email: " . $variables['email'] . "\n";
+	    $message .= "Phone: " . $variables['phone'] . "\n";	
 	    $message .= "Message: " . clean_var($_REQUEST['message']) . "\n";
 	    $subject = clean_var($_REQUEST['subject']);
 	    $header = 'From:'. $sendFrom;
