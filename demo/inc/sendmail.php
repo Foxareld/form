@@ -160,6 +160,9 @@ if ( empty($_REQUEST['last']) ) {
 	    	$email = clean_var($_REQUEST['email']);
 	    	$variables['email'] = $email;
 	    }
+	    if (isset($_REQUEST['phone']) ){
+	    	$zip = clean_var($_REQUEST['phone']);
+	    	$variables['phone'] = $phone;
 	    if (isset($_REQUEST['address'])) {
 	    	$address = clean_var($_REQUEST['address']);
 	    	$variables['address'] = $address;
